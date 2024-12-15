@@ -49,14 +49,11 @@
 
     <footer class="post-footer">
         <% if (page.tags && page.tags.length) { %>
-            <div class="post-tags">
-                <i class="icon-tag"></i>
-                <%- list_tags(page.tags, {
-                    show_count: false,
-                    class: 'tag',
-                    style: 'none',
-                    separator: ' '
-                }) %>
+            <div class="meta-item">
+                <i class="fas fa-tags"></i>
+                <% page.tags.forEach(function(tag) { %>
+                    <span class="tag"><%= tag.name %></span>
+                <% }) %>
             </div>
         <% } %>
     </footer>

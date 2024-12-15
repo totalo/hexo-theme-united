@@ -1,0 +1,28 @@
+{
+    "name": "hexo-theme-united",
+    "version": "1.0.0",
+    "private": false,
+    "description": "A hexo theme.",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/totalo/hexo-theme-united.git"
+    },
+    "keywords": [
+      "hexo",
+      "theme",
+      "simple",
+      "pure",
+      "hexo-theme",
+      "blog"
+    ],
+    "author": "totalo",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/totalo/hexo-theme-united.git"
+    },
+    "homepage": "https://github.com/totalo/hexo-theme-united#readme",
+    "main": "_config.yml",
+    "dependencies": {
+        "hexo-wordcount": "^6.0.1"
+    }
+  }

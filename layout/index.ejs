@@ -16,14 +16,13 @@
                     <% } %>
                 </div>
                 <div class="post-excerpt">
-                    <p><%= strip_html(post.excerpt) %></p>
-                    <a href="<%- url_for(post.path) %>" class="read-more">>>阅读全文</a>
+                    <p><%= strip_html(post.excerpt) %><a href="<%- url_for(post.path) %>" class="read-more">>>阅读全文</a></p>
                 </div>
                 <% if (post.tags && post.tags.length) { %>
                     <div class="post-tags">
                         <i class="fa fa-tags"></i>
                         <% post.tags.forEach(function(tag) { %>
-                            <span class="tag"><%= tag.name %></span>
+                            <a class="archive-tag" href="<%- url_for(tag.path) %>"><%= tag.name %></a>
                         <% }) %>
                     </div>
                 <% } %>

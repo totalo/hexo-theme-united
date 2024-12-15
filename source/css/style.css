@@ -609,6 +609,10 @@ body {
     .year-list {
         grid-template-columns: 1fr;
     }
+
+    .month-section {
+        width: 100%; /* 移动端变为单列 */
+    }
 }
 
 .archive-post-list {
@@ -655,11 +659,46 @@ body {
 }
 
 .archive-container .month-section {
+    width: calc(50% - 20px); /* 宽度设为50%减去间距的一半 */
     margin-bottom: 30px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 20px;
 }
 
 .archive-container .month-section:last-child {
     border-bottom: none;
+}
+
+
+.archive-list {
+    display: flex;  /* 使用 flex 布局 */
+    flex-wrap: wrap; /* 允许换行 */
+    gap: 40px;  /* 列间距 */
+}
+
+.archive-tag {
+    display: inline-block;
+    color: #666;
+    text-decoration: none;
+    position: relative;
+    padding: 0 4px; /* 减小内边距 */
+}
+
+/* 添加分隔符 */
+.archive-tag:not(:last-child)::after {
+    content: ",";
+    margin-right: 4px;
+    color: #666;
+}
+
+/* 鼠标悬停效果 */
+.archive-tag:hover {
+    color: #d85030; /* 或者您想要的高亮颜色 */
+    text-decoration: underline; /* 添加下划线效果 */
+}
+
+/* 标签容器 */
+.archive-post-tags {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2px; /* 减小标签之间的间距 */
 }
